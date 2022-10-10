@@ -1,18 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Header from './componants/Header/Header';
+import Home from './componants/Home/Home';
+import Statics from './componants/Statics/Statics';
+import About from './componants/About/About';
+import Root from './Root/Root';
+import Blog from './componants/Blog/Blog';
+import Topics from './componants/Topics/Topics';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Header></Header>
-    }
+      element: <Root></Root>,
+
+      children: [
+
+        {
+          path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/topics',
+          element: <Topics></Topics>
+        },
+        {
+          path: '/statics',
+          element: <Statics></Statics>
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
+        },
+
+        {
+          path: '/about',
+          element: <About></About>
+        },
+
+      ]
+    },
+
+
+
   ])
+
   return (
     <div className="App">
-      <h2>Hello React</h2>
 
       <RouterProvider router={router}></RouterProvider>
     </div>
