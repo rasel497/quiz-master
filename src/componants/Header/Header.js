@@ -4,8 +4,11 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
-            <nav className='header'>
+        <div className='header'>
+            <div className='quiz'>
+                <h2>Quiz-Master</h2>
+            </div>
+            <nav className='header-link'>
                 <Link to='/'>Home</Link>
                 <Link to='/topics'>Topics</Link>
                 <Link to='/statics'>Statics</Link>

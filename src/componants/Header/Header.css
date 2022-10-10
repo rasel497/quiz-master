@@ -1,4 +1,14 @@
-.header a {
+.header {
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-link a {
     text-decoration: none;
-    margin-left: 10px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+
 }
