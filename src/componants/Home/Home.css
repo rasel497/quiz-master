@@ -1,0 +1,84 @@
+.card-father {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.cardz {
+    width: 250px;
+    height: 300px;
+    border: 1px solid rgb(141, 134, 134);
+    border-radius: 5px;
+}
+
+.cardz img {
+    width: 80%;
+}
+
+.card-title2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.card-title2 p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-practice {
+    border: 0;
+    background-color: blue;
+    color: white;
+    border-radius: 3px;
+
+}
+
+
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 8px;
+
+}
+
+.btn-quiz {
+    border: 0;
+    color: white;
+    background-color: blueviolet;
+    margin: 2px;
+}
+
+/* mobile device */
+@media screen and (max-width: 676px) {
+    .card-father {
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column-reverse;
+        margin: 20px;
+        border-radius: 5px;
+    }
+
+    .card-group {
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+/* tablet device */
+@media screen and (min-width: 677px) and (max-width: 992px) {
+    .card-father {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-group {
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+
+}

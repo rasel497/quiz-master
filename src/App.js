@@ -8,6 +8,7 @@ import Root from './Root/Root';
 import Blog from './componants/Blog/Blog';
 import Topics from './componants/Topics/Topics';
 
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -15,11 +16,11 @@ function App() {
       element: <Root></Root>,
 
       children: [
-
         {
           path: '/home',
           element: <Home></Home>
         },
+
         {
           path: '/topics',
           element: <Topics></Topics>
@@ -47,7 +48,6 @@ function App() {
 
   return (
     <div className="App">
-
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

@@ -1,9 +1,11 @@
 import React from 'react';
+import QuizBar from '../QuizBar/QuizBar';
 
-const Topics = () => {
+const Topics = ({ quiz }) => {
+    // const { id, total } = quiz;
     return (
         <div>
-            <h2>This is topics</h2>
+
         </div>
     );
 };

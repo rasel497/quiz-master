@@ -1,28 +1,23 @@
 import React from 'react';
+import NavLinks from '../NavLinks/NavLinks';
 import './Header.css'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand className='quiz-nav' herf="/">Quiz-Master</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto"></Nav>
-                    <Nav className='nav-link'>
-                        <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/home">Home</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/topics">Topics</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/statics">Statics</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/blog">Blog</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/about">About</NavLink>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+
+        <div className='container'>
+            <div className="banner">
+                <div className="content">
+                    <h1>DESIGN AND DEVELOPMENT</h1>
+                    <p>Subscribe Rh-Advanced Tutorials YouTube Channel to watch more videos, <br /> Press the bell icon to get
+                        latest updates.</p>
+                    <div>
+                        <button type="button"><span className="btn-spn"></span>WATCH MORE</button>
+                        <button type="button"><span className="btn-spn"></span>SUBSCRIBE NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 
