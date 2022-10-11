@@ -7,7 +7,7 @@ import About from './componants/About/About';
 import Root from './Root/Root';
 import Blog from './componants/Blog/Blog';
 import Topics from './componants/Topics/Topics';
-
+import ErrorPage from './componants/ErrorPage/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +16,7 @@ function App() {
       element: <Root></Root>,
 
       children: [
+
         {
           path: '/home',
           element: <Home></Home>
@@ -41,6 +42,10 @@ function App() {
 
       ]
     },
+    {
+      path: '*',
+      element: <ErrorPage></ErrorPage>
+    }
 
 
 
