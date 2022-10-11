@@ -8,35 +8,41 @@ import Root from './Root/Root';
 import Blog from './componants/Blog/Blog';
 import Topics from './componants/Topics/Topics';
 import ErrorPage from './componants/ErrorPage/ErrorPage';
+import Header from './componants/Header/Header';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Root></Root>,
-
       children: [
-
         {
-          path: '/home',
+          path: '/',
           element: <Home></Home>
         },
-
         {
-          path: '/topics',
-          element: <Topics></Topics>
+          path: 'home',
+          element: <Home></Home>
         },
         {
-          path: '/statics',
+          path: 'topics',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz/${id}');
+          },
+          element: <Topics></Topics>
+        },
+
+        {
+          path: 'statics',
           element: <Statics></Statics>
         },
         {
-          path: '/blog',
+          path: 'blog',
           element: <Blog></Blog>
         },
 
         {
-          path: '/about',
+          path: 'about',
           element: <About></About>
         },
 

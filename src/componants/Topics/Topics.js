@@ -1,10 +1,13 @@
 import React from 'react';
-import QuizBar from '../QuizBar/QuizBar';
+import { useLoaderData } from 'react-router-dom';
 
-const Topics = ({ quiz }) => {
-    // const { id, total } = quiz;
+
+const Topics = () => {
+    const topics = useLoaderData()
+    console.log(topics);
     return (
         <div>
+            <h2>This is topics: {topics.length}</h2>
 
         </div>
     );

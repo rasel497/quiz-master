@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import Header from '../Header/Header';
 import './Home.css'
 
 const Home = () => {
     return (
         <div>
-            <h2>This is home</h2>
-
+            {/* <h2>This is home</h2> */}
+            <Header></Header>
             <div className="card-father">
                 <Card className="card-group" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="/logo512.png" />
