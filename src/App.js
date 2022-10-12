@@ -24,7 +24,7 @@ function App() {
         },
 
         {
-          path: 'topics',
+          path: 'about',
           loader: async () => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/`);
           },
@@ -33,6 +33,9 @@ function App() {
 
         {
           path: 'statics',
+          loader: async () => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz`);
+          },
           element: <Statics></Statics>
         },
         {

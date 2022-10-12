@@ -1,14 +1,13 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-
+import './Topics.css'
 
 const Topics = () => {
     const topics = useLoaderData()
     console.log(topics);
     return (
-        <div>
-            <h2>This is topics: {topics.length}</h2>
-
+        <div className='under-const'>
+            <img src="/undrconstruction.jpg" alt="" />
         </div>
     );
 };

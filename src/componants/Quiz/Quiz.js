@@ -7,7 +7,6 @@ const Quiz = () => {
     console.log(quizes);
     return (
         <div>
-            <h2>Quiz</h2>
             {
                 quizes.map((quiz, idx) => <Questions
                     key={quiz.id}

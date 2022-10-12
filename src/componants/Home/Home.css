@@ -10,6 +10,7 @@
     height: 300px;
     border: 1px solid rgb(141, 134, 134);
     border-radius: 5px;
+
 }
 
 .cardz img {
@@ -36,34 +37,25 @@
 
 }
 
-
 .card-bottom {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 8px;
-
 }
 
-.btn-quiz {
-    border: 0;
-    color: white;
-    background-color: blueviolet;
-    margin: 2px;
-}
 
 /* mobile device */
 @media screen and (max-width: 676px) {
-    .card-father {
+    .card-container {
         grid-template-columns: repeat(1, 1fr);
         flex-direction: column-reverse;
-        margin: auto;
         margin: 20px;
         border-radius: 5px;
     }
 
     .card-group {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         margin: auto;
         margin-top: 30px;
         margin-bottom: 40px;
@@ -72,7 +64,7 @@
 
 /* tablet device */
 @media screen and (min-width: 677px) and (max-width: 992px) {
-    .card-father {
+    .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
 

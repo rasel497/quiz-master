@@ -1,7 +1,6 @@
 import React from 'react';
-import { useRouteError } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 import './ErrorPage.css'
-
 
 const ErrorPage = () => {
     const error = useRouteError();
@@ -14,8 +13,8 @@ const ErrorPage = () => {
             </div>
             <div className="error">
                 <h3>Ops! An Error Ocurred!</h3>
+                <Link to="/"><h5>Back to home page</h5></Link>
             </div>
-
         </div>
     );
 };

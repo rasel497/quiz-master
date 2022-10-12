@@ -10,22 +10,29 @@ const Questions = ({ quiz, idx }) => {
     const cheackAnswer = (e) => {
         const value = e.target.value;
         if (value === correctAnswer) {
-            toast.success("Correct", { autoClose: 500 });
+            toast.success("Correct answer", { autoClose: 500 });
         }
         else {
-            toast.error('Wrong', { autoClose: 500 })
+            toast.error('Wrong answer', { autoClose: 500 })
         }
         // quizCalculatin(e.target)
     }
 
-
+    // correct
+    const correctAns = (showanser) => {
+        toast('Good Job!Go ahead!', {
+            icon: '👏',
+        });
+        // toast.info("Correct answer", { autoClose: 500 });
+    }
 
 
     return (
         <div className="quiz-box">
             <p className='question'>Quiz {idx + 1}:{question}
-
-                <EyeIcon className="icon-eye h-5 w-6 text-blue-500" />
+                <div className="">
+                    <EyeIcon onClick={() => correctAns(correctAnswer)} className="icon-eye h-5 w-6 text-blue-500" />
+                </div>
             </p>
 
             <div className="quiz-temp">

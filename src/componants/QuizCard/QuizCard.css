@@ -1,3 +1,33 @@
-.card-group {
-    background-color: palevioletred;
+.card-group2 {
+    background-color: brown;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 8px;
+}
+
+.btnns {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-practice {
+    width: 100%;
+    border: 0;
+    color: black;
+    background-color: salmon;
+    margin: 2px;
+    text-decoration: 0;
+    padding: 1px 10px;
+}
+
+.btn-practice:hover {
+    color: black;
+    background-color: tomato;
 }
