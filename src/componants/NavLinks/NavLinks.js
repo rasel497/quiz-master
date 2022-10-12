@@ -15,11 +15,10 @@ const NavLinks = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto"></Nav>
                         <Nav className='nav-link'>
-                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/home">Home</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/">Home</NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/topics">Topics</NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/statics">Statics</NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/blog">Blog</NavLink>
-                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/about">About</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -9,8 +9,7 @@ const ErrorPage = () => {
 
     return (
         <div>
-            <h2>Error Page</h2>
-            <div className="error-img">
+            <div className="error-imgg">
                 <img src="/404image.webp" alt="" />
             </div>
             <div className="error">

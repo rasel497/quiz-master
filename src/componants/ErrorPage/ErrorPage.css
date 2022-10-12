@@ -1,4 +1,4 @@
-.error {
+.error-imgg {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,5 +7,4 @@
 
 h3 {
     font-size: 20px;
-
 }

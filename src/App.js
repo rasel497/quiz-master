@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './componants/Home/Home';
 import Statics from './componants/Statics/Statics';
-import About from './componants/About/About';
 import Root from './Root/Root';
 import Blog from './componants/Blog/Blog';
 import Topics from './componants/Topics/Topics';
 import ErrorPage from './componants/ErrorPage/ErrorPage';
-import Header from './componants/Header/Header';
+import Quiz from './componants/Quiz/Quiz';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -18,16 +17,16 @@ function App() {
       children: [
         {
           path: '/',
+          loader: async () => {
+            return fetch(' https://openapi.programming-hero.com/api/quiz');
+          },
           element: <Home></Home>
         },
-        {
-          path: 'home',
-          element: <Home></Home>
-        },
+
         {
           path: 'topics',
           loader: async () => {
-            return fetch('https://openapi.programming-hero.com/api/quiz/${id}');
+            return fetch(`https://openapi.programming-hero.com/api/quiz/`);
           },
           element: <Topics></Topics>
         },
@@ -42,18 +41,19 @@ function App() {
         },
 
         {
-          path: 'about',
-          element: <About></About>
+          path: 'quiz/:quizId',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`);
+          },
+          element: <Quiz></Quiz>
         },
-
       ]
+
     },
     {
       path: '*',
       element: <ErrorPage></ErrorPage>
     }
-
-
 
   ])
 

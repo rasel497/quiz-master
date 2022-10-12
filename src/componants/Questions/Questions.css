@@ -1,0 +1,35 @@
+.quiz-temp {
+    border-radius: 8px;
+}
+
+.quiz-box {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+    position: relative;
+}
+
+.option-items {
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: left;
+    padding: 8px;
+}
+
+.icon-eye {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.input-left {
+    margin-left: 10px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+}
