@@ -40,7 +40,6 @@ const Questions = ({ quiz, idx }) => {
                     options.map(option =>
                         <div className='option-items'>
                             <input onClick={(e) => cheackAnswer(e)} type="radio" id={option} name={question} value={option} />
-                            {/* <input id={`option`} type="radio" name={`question`} value={`option`} /> */}
                             <label className='input-left' htmlFor={option}>{option}</label>
 
                             <Toaster></Toaster>

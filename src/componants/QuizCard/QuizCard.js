@@ -5,16 +5,16 @@ import './QuizCard.css'
 import { BookOpenIcon } from '@heroicons/react/24/solid'
 
 const QuizCard = ({ quiz }) => {
-    const { name, logo, id } = quiz;
-
+    const { name, logo, id, total } = quiz;
+    console.log(total);
     return (
         <div className='cardzz'>
             <Card className="card-group2" style={{ width: '18rem' }}>
                 <Card.Img className="card-img" variant="top" src={logo} />
                 <Card.Body>
                     <div className="card-title2">
-                        <p>{name} </p>
-                        <BookOpenIcon className=" h-5 w-6 text-blue-500" />
+                        <p>{name}</p>
+                        <p><BookOpenIcon className="h-5 w-6 text-blue-500 inline" /> {total}</p>
                     </div>
                     <div className="btnns">
                         <button className='btn-practice'><Link className='btn-practice' to={`/quiz/${id}`}>START PRACTICE</Link></button>

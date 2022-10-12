@@ -1,5 +1,5 @@
 .card-group2 {
-    background-color: brown;
+    background-color: slategray !important;
 }
 
 .card-bottom {
@@ -10,7 +10,6 @@
 }
 
 .btnns {
-
     display: flex;
     align-items: center;
     justify-content: center;

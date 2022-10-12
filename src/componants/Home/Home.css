@@ -1,16 +1,8 @@
-.card-father {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 20px;
-}
-
 .cardz {
     width: 250px;
     height: 300px;
     border: 1px solid rgb(141, 134, 134);
     border-radius: 5px;
-
 }
 
 .cardz img {
@@ -50,7 +42,7 @@
     .card-container {
         grid-template-columns: repeat(1, 1fr);
         flex-direction: column-reverse;
-        margin: 20px;
+        margin-left: 20px;
         border-radius: 5px;
     }
 
@@ -66,11 +58,13 @@
 @media screen and (min-width: 677px) and (max-width: 992px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+        margin-left: 30px;
     }
 
     .card-group {
         grid-template-columns: repeat(2, 1fr);
         margin: auto;
+
     }
 
 }
